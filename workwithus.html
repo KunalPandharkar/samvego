@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/2b19638171.js"></script>
+
+    <title>VeGo</title>
+</head>
+
+<style>
+    .select-type {
+        box-shadow: 0.5px 0.5px 3px lightgrey;
+        background-color: lightgrey;
+        background-image: linear-gradient(-90deg, rgb(223, 224, 224), rgb(255, 255, 255));
+        border-radius: 5px;
+        width: 85%;
+        height: 21rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    #select-type-item1 {
+        border: 1px solid rgb(221, 221, 221);
+        box-shadow: 1px 1px 3px lightgrey;
+        width: 100%;
+        height: 30%;
+        margin-bottom: 1rem;
+        display: flex;
+       
+
+    }
+
+    #select-type-item1:hover {
+        background-image: linear-gradient(-90deg, rgb(219, 226, 230), rgb(235, 235, 235));
+    }
+
+    #select-type-item2:hover {
+        background-image: linear-gradient(-90deg, rgb(219, 226, 230), rgb(235, 235, 235));
+    }
+
+    #select-type-item3:hover {
+        background-image: linear-gradient(-90deg, rgb(219, 226, 230), rgb(235, 235, 235));
+    }
+
+    #select-type-item2 {
+        border: 1px solid rgb(221, 221, 221);
+        box-shadow: 1px 1px 3px lightgrey;
+        width: 100%;
+        height: 30%;
+        margin-bottom: 1rem;
+        display: flex;
+       
+    }
+
+    #select-type-item3 {
+        border: 1px solid rgb(221, 221, 221);
+        box-shadow: 1px 1px 3px lightgrey;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        
+    }
+
+    .type-img {
+        width: 40%;
+    }
+
+    .type-img img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .type-txt span {
+        font-size: 1rem;
+    }
+
+    .type-txt {
+        margin-top: 1.9rem;
+    }
+</style>
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5;width:80%;" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()"><i class="fa fa-user-circle-o"
+            aria-hidden="true" style="margin-right: 1rem;"></i>Hello User !<i class="fa fa-window-close"
+            style="float: right;" aria-hidden="true"></i></button>
+
+    <div class="dropdown-divider"></div>
+    <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"
+            style="margin-right: 1rem;"></i> Home</a>
+    <!---<a href="#" class="w3-bar-item w3-button">Your Orders </a> !-->
+
+    <div class="dropdown-divider"></div>
+
+    <a href="emergencyservice.html" class="w3-bar-item w3-button"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true" style="margin-right: 1rem;"></i> Emergency Service</a>
+    <a href="comparecars.html" class="w3-bar-item w3-button"><i class="fa fa-balance-scale" aria-hidden="true"
+            style="margin-right: 1rem;"></i>Compare Vehicles</a>
+    <a href="servicing.html" class="w3-bar-item w3-button"> <i class="fa fa-car" aria-hidden="true"
+            style="margin-right: 1rem;"></i> Nearby Showrooms & Shops</a>
+    <a href="ondoorservice.html" class="w3-bar-item w3-button"><i class="fa fa-cogs" aria-hidden="true"
+            style="margin-right: 1rem;"></i> Nearby Garages & Workshops</a>
+    <div class="dropdown-divider"></div>
+    <a href="workwithus.html" class="w3-bar-item w3-button"><i class="fa fa-handshake-o" aria-hidden="true"
+            style="margin-right: 1rem;"></i>Work With Us</a>
+    <a href="aboutus.html" class="w3-bar-item w3-button"><i class="fa fa-globe" aria-hidden="true"
+            style="margin-right: 1rem;"></i> About Us</a>
+    <a href="contactus.html" class="w3-bar-item w3-button"><i class="fa fa-phone-square" aria-hidden="true"
+            style="margin-right: 1rem;"></i> Contact Us</a>
+    <div class="dropdown-divider"></div>
+    <a href="login.html" class="w3-bar-item w3-button"><i class="fa fa-sign-in" aria-hidden="true"
+            style="margin-right: 1rem;"></i> Login/Sign Up</a>
+
+    <div class="dropdown-divider"></div>
+
+
+
+</div>
+
+<nav class="navbar navbar-expand-lg navbar navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" onclick="w3_open()"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="index.html">
+        <img src="logo.png" class="d-inline-block align-top rounded" alt="">
+    </a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a href="emergencyservice.html" class="w3-bar-item w3-button">Emergency Service</a>
+                    <a href="comparecars.html" class="w3-bar-item w3-button">Compare Vehicles</a>
+                    <a href="servicing.html" class="w3-bar-item w3-button">Nearby Showrooms and Shops</a>
+                    <a href="ondoorservice.html" class="w3-bar-item w3-button">Nearby Garages and Workshops</a>
+                </div>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-item">
+                <a class="nav-link" href="workwithus.html">Work with Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal1">Login/SignUp</a>
+            </li>
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Email ID">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Mobile Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+
+                        <button type="submit" class="btn btn-dark btn-signin" style="width: 100%;">Sign In</button>
+                        <hr>
+                        <div class="form-group">
+                            <a href="" data-toggle="modal" data-target="#exampleModal2">Don't Have an Account ? Register
+                            </a>
+                        </div>
+
+                        <button type="submit" class="btn btn-google"><i class="fa fa-google" aria-hidden="true"></i>
+                            Sign In with Google</button>
+                        <button type="submit" class="btn btn-facebook"><i class="fa fa-facebook-square"
+                                aria-hidden="true"></i> Sign In with Facebook </button>
+
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark">Save changes</button>
+            </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Email ID">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Mobile Number">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Confirm Password">
+                        </div>
+
+                        <button type="submit" class="btn btn-dark btn-signin"
+                            style="width: 100%; margin-bottom: 10px;">Register</button>
+
+                        <div class="form-group">
+
+                            <a href="" data-toggle="modal" data-target="#exampleModal2">Already Have an Account ? Sign
+                                In
+                            </a>
+                        </div>
+                        <hr>
+                        <button type="submit" class="btn btn-google"><i class="fa fa-google" aria-hidden="true"></i>
+                            Sign In with Google</button>
+                        <button type="submit" class="btn btn-facebook"><i class="fa fa-facebook-square"
+                                aria-hidden="true"></i> Sign In with Facebook </button>
+
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark">Save changes</button>
+            </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-dismissible fade show" role="alert"  style="background-image: linear-gradient(-90deg, rgb(221, 229, 233), rgb(199, 248, 250));">
+        <strong>Hello User,</strong>
+        select whether you want your showroom, garage or service center to be registered !
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="container select-type">
+
+        <div id="select-type-item1" onclick="location.href='ownergarage.html';">
+            <div class="type-img">
+                <img src="img/reggarage.png" alt="">
+            </div>
+            <div class="type-txt">
+                <span>
+                    <p>Register Garage</p>
+                </span>
+            </div>
+        </div>
+
+        <div id="select-type-item2" onclick="location.href='ownershowroom.html';">
+            <div class="type-img">
+                <img src="img/regshowroom.png" alt="">
+            </div>
+            <div class="type-txt">
+                <span>
+                    <p>Register Showroom</p>
+                </span>
+            </div>
+        </div>
+
+        <div id="select-type-item3" onclick="location.href='ownerservicecenter.html';">
+            <div class="type-img">
+                <img src="img/regservicecenter.png" alt="">
+            </div>
+            <div class="type-txt">
+                <span>
+                    <p>Register Service Center</p>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <p class="footer-item">© 2020-2021 VeGO</p>
+        <a style="margin: auto;" href="#"><i class="large material-icons footer-item">arrow_upward</i></a>
+
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript">
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+
+</script>
+
+</html>

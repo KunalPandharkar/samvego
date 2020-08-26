@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://use.fontawesome.com/2b19638171.js"></script>
+    <title>VeGO</title>
+</head>
+<style>
+    .fa-star {
+        color: gold;
+    }
+
+    .fa-whatsapp {
+        color: green;
+    }
+
+    .input-group {
+        border: 2px solid white;
+
+    }
+
+    .carousel-item img {
+        height: 13rem;
+        transform: scale(1.5);
+        /* (150% zoom)*/
+    }
+
+
+    @media(min-width:900px) {
+        .input-group {
+            border: 2px solid white;
+            width: 55%;
+            margin-left: 25%;
+        }
+
+        .carousel-item img {
+            height: 30rem;
+
+        }
+    }
+
+
+    input[type=text] {
+        box-sizing: border-box;
+        border: 2px solid rgb(173, 172, 172);
+        border-left: none;
+        padding-left: 1rem;
+        height: 3rem;
+        background-color: white;
+        background-image: linear-gradient(-90deg, #A60523, #db0e37);
+        width: 80%;
+
+    }
+
+    #button-addon2 img {
+        height: 1.3rem;
+        width: 1.3rem;
+    }
+
+    .btn-outline {
+        margin-left: 0.8rem;
+        background-color: rgb(202, 201, 201);
+        background-image: linear-gradient(-90deg, #ebebeb, #f1f1f1);
+        border: 2px solid rgb(212, 212, 212);
+    }
+
+    ::placeholder {
+        color: white;
+    }
+
+    /* vehicles in showroom */
+    .vehicle-cont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+
+    .vehicle-item {
+        padding: 0.5rem;
+        padding-bottom: 0.7rem;
+        width: 33%;
+        border: 0.5px solid rgb(240, 239, 239);
+        box-shadow: 0.5px 0.5px 3px rgb(240, 239, 239);
+        margin-bottom: 0.5rem;
+    }
+
+    .vehicle-item:hover {
+        background-color: rgb(238, 238, 238);
+    }
+
+    .vehicle-item-img {
+        height: 50%;
+    }
+
+    .vehicle-item-img img {
+        height: 90%;
+        width: 100%;
+        transition: width 2s ease, height 2s ease;
+    }
+
+    span {
+        font-size: 0.7rem;
+    }
+
+    .vehicle-item-txt2 span {
+        font-size: 0.5rem;
+        color: grey;
+    }
+
+    .container-showroom-abt {
+        display: flex;
+        padding: 1rem;
+        padding-bottom: none;
+        padding-top: 1.9rem;
+        justify-content: space-between;
+        color: black;
+        flex-wrap: wrap;
+        background-image: linear-gradient(-180deg, white, rgb(247, 247, 247), rgb(255, 255, 255));
+    }
+
+    .abt-item {
+        width: 33%;
+    }
+
+    @media(min-width:900px) {
+        .vehicle-item {
+            width: 16%;
+        }
+
+        .container-showroom-abt {
+            justify-content: center;
+        }
+    }
+
+    .abt-item {
+        display: flex;
+        width: 100%;
+        margin-right: 1rem;
+
+    }
+
+    .abt-item1 {
+        height: 3rem;
+    }
+
+    .abt-item1 img {
+        height: 2rem;
+        width: 2rem;
+        background-color: rgb(236, 235, 235);
+        border: 2px solid rgb(150, 150, 150);
+        border-radius: 50%;
+    }
+
+    .abt-item2 {
+        margin-top: 0.3rem;
+        margin-left: 1rem;
+        width: 100%;
+    }
+
+    .abt-item2 span {
+
+        font-size: 0.8rem;
+    }
+
+    @media(min-width:900px) {
+        .vehicle-item {
+            width: 16%;
+        }
+
+        .abt-item {
+            width: 40%;
+        }
+    }
+
+    .ratings p {
+        float: right;
+        margin-right: 1.5rem;
+        margin-left: -10rem;
+        margin-top: 1rem;
+        background-color: rgb(38, 168, 12);
+        opacity: 0.9;
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        border: 1px solid white;
+        border-radius: 10%;
+        color: white;
+    }
+
+    .carousel-indicators {
+        display: none;
+    }
+
+    #prev {
+        display: none;
+    }
+
+    .showroom-top-info {
+            margin: 1rem;
+        }
+
+        #showroom-name {
+            font-size: 1rem;
+        }
+
+        .ratings1 p {
+            float: right;
+            margin-right: 1.5rem;
+            margin-left: -10rem;
+            background-color: rgb(38, 168, 12);
+            opacity: 0.9;
+            font-size: 0.7rem;
+            padding: 0.3rem;
+            border: 1px solid white;
+            border-radius: 10%;
+            color: white;
+        }
+</style>
+<!-- Sidebar -->
+<header>
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5;width:80%;" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()"><i class="fa fa-user-circle-o"
+                aria-hidden="true" style="margin-right: 1rem;"></i>Hello User !<i class="fa fa-window-close"
+                style="float: right;" aria-hidden="true"></i></button>
+
+        <div class="dropdown-divider"></div>
+        <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"
+                style="margin-right: 1rem;"></i> Home</a>
+        <!---<a href="#" class="w3-bar-item w3-button">Your Orders </a> !-->
+
+        <div class="dropdown-divider"></div>
+
+        <a href="emergencyservice.html" class="w3-bar-item w3-button"><i class="fa fa-exclamation-triangle"
+                aria-hidden="true" style="margin-right: 1rem;"></i> Emergency Service</a>
+        <a href="comparecars.html" class="w3-bar-item w3-button"><i class="fa fa-balance-scale" aria-hidden="true"
+                style="margin-right: 1rem;"></i>Compare Vehicles</a>
+        <a href="servicing.html" class="w3-bar-item w3-button"> <i class="fa fa-car" aria-hidden="true"
+                style="margin-right: 1rem;"></i> Nearby Showrooms & Shops</a>
+        <a href="ondoorservice.html" class="w3-bar-item w3-button"><i class="fa fa-cogs" aria-hidden="true"
+                style="margin-right: 1rem;"></i> Nearby Garages & Workshops</a>
+        <div class="dropdown-divider"></div>
+        <a href="workwithus.html" class="w3-bar-item w3-button"><i class="fa fa-handshake-o" aria-hidden="true"
+                style="margin-right: 1rem;"></i>Work With Us</a>
+        <a href="aboutus.html" class="w3-bar-item w3-button"><i class="fa fa-globe" aria-hidden="true"
+                style="margin-right: 1rem;"></i> About Us</a>
+        <a href="contactus.html" class="w3-bar-item w3-button"><i class="fa fa-phone-square" aria-hidden="true"
+                style="margin-right: 1rem;"></i> Contact Us</a>
+        <div class="dropdown-divider"></div>
+        <a href="login.html" class="w3-bar-item w3-button"><i class="fa fa-sign-in" aria-hidden="true"
+                style="margin-right: 1rem;"></i> Login/Sign Up</a>
+
+        <div class="dropdown-divider"></div>
+
+
+
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" onclick="w3_open()"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" class="d-inline-block align-top rounded" alt="">
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="emergencyservice.html" class="w3-bar-item w3-button">Emergency Service</a>
+                        <a href="comparecars.html" class="w3-bar-item w3-button">Compare Vehicles</a>
+                        <a href="servicing.html" class="w3-bar-item w3-button">Nearby Showrooms and Shops</a>
+                        <a href="ondoorservice.html" class="w3-bar-item w3-button">Nearby Garages and Workshops</a>
+                    </div>
+                </li>
+                <div class="dropdown-divider"></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="workwithus.html">Work with Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal1">Login/SignUp</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Page Content -->
+    <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+</header>
+
+<body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Email ID">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Mobile Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+
+                        <button type="submit" class="btn btn-dark btn-signin" style="width: 100%;">Sign In</button>
+                        <hr>
+                        <div class="form-group">
+                            <a href="" data-toggle="modal" data-target="#exampleModal2">Don't Have an Account ? Register
+                            </a>
+                        </div>
+
+                        <button type="submit" class="btn btn-google"><i class="fa fa-google" aria-hidden="true"></i>
+                            Sign In with Google</button>
+                        <button type="submit" class="btn btn-facebook"><i class="fa fa-facebook-square"
+                                aria-hidden="true"></i> Sign In with Facebook </button>
+
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark">Save changes</button>
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Email ID">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Mobile Number">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Confirm Password">
+                        </div>
+
+                        <button type="submit" class="btn btn-dark btn-signin"
+                            style="width: 100%; margin-bottom: 10px;">Register</button>
+
+                        <div class="form-group">
+
+                            <a href="" data-toggle="modal" data-target="#exampleModal2">Already Have an Account ? Sign
+                                In
+                            </a>
+                        </div>
+                        <hr>
+                        <button type="submit" class="btn btn-google"><i class="fa fa-google" aria-hidden="true"></i>
+                            Sign In with Google</button>
+                        <button type="submit" class="btn btn-facebook"><i class="fa fa-facebook-square"
+                                aria-hidden="true"></i> Sign In with Facebook </button>
+
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark">Save changes</button>
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/infoshowroom1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/infoshowroom2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/infoshowroom3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/infoshowroom4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/infoshowroom1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/infoshowroom2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/infoshowroom3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <a id="prev" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a id="prev" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+    <div class="offer-cont-outer">
+        <div class="horizontal-scroll">
+            <div class="scroll-container">
+                <div class="showroom-item scrollmenu">
+                    <img id="showroom1" src="img/infoshowroom1.jpg" data-target="#carouselExampleIndicators"
+                        data-slide-to="0" alt="">
+                    <img id="showroom2" src="img/infoshowroom2.jpg" data-target="#carouselExampleIndicators"
+                        data-slide-to="1" alt="">
+                    <img id="showroom3" src="img/infoshowroom3.jpg" data-target="#carouselExampleIndicators"
+                        data-slide-to="2" alt="">
+                    <img id="showroom4" src="img/infoshowroom4.jpg" data-target="#carouselExampleIndicators"
+                        data-slide-to="3" alt="">
+                    <img id="showroom4" src="img/infoshowroom1.jpg" data-target="#carouselExampleIndicators"
+                        data-slide-to="4" alt="">
+                    <img id="showroom4" src="img/infoshowroom2.jpg" data-target="#carouselExampleIndicators"
+                        data-slide-to="5" alt="">
+                    <img id="showroom4" src="img/infoshowroom3.jpg" data-target="#carouselExampleIndicators"
+                        data-slide-to="6" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="showroom-top-info">
+        <div class="ratings1">
+            <p>4.5 <i class="fa fa-star" aria-hidden="true" style="color: white; margin-top: 0.1rem;"></i></p>
+        </div>
+        <strong>
+            <span>
+                <p id="showroom-name">Arihant Hero-Honda Showroom</p>
+            </span>
+        </strong>
+        <span>
+            <p>Near street 8, Aurangabad</p>
+        </span>
+    </div>
+
+
+    <hr>
+    <h2 class="scroll-heading" style="font-size: 1.2rem;">Popular Vehicles in our Showroom</h2>
+    <div class="underline-heading"></div>
+       
+    <div class="vehicle-cont">
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
+                </span>
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
+                </span>
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
+                </span>
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
+                </span>
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
+                </span>
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
+                </span>
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <a href="morevehicles.html" style=" float: right; margin-right: 1.5rem;"><span>263 More >></span></a>
+    <hr>
+
+    <h2 class="scroll-heading" style="font-size: 1.2rem;">Upcoming Vehicles in our Showroom</h2>
+    <div class="underline-heading"></div>
+   
+    <div class="vehicle-cont">
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle1.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Coming On
+                        <br>August 2021
+                    </p>
+                </span>
+
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle1.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Coming On
+                        <br>August 2021
+                    </p>
+                </span>
+
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle1.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Coming On
+                        <br>August 2021
+                    </p>
+                </span>
+
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle1.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Coming On
+                        <br>August 2021
+                    </p>
+                </span>
+
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle1.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Coming On
+                        <br>August 2021
+                    </p>
+                </span>
+
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
+            <div class="vehicle-item-img">
+                <img src="img/vehicle1.png" alt="">
+            </div>
+            <div class="vehicle-item-txt1">
+                <span>
+                    <strong>
+                        <p>Hero Passion Pro</p>
+                    </strong>
+                </span>
+            </div>
+            <div class="vehicle-item-txt2">
+                <span>
+                    <p>Coming On
+                        <br>August 2021
+                    </p>
+                </span>
+
+            </div>
+            <div class="vehicle-item-txt3">
+                <span>
+                    <p>
+                        <strong>
+                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
+                        </strong>
+                    </p>
+                </span>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <a href="morevehicles2.html" style=" float: right; margin-right: 1.5rem;"><span>20 More >></span></a>
+    <hr>
+    <div class="garage-about-title">
+        <h2 class="scroll-heading">About Showroom</h2>
+        <div class="underline-heading"></div>
+        <hr>
+    </div>
+
+    <div class="ratings">
+
+        <p>4.5 <i class="fa fa-star" aria-hidden="true" style="color: white;"></i></p>
+
+    </div>
+
+
+    <div class="container-showroom-abt">
+
+        <div class="abt-item">
+            <div class="abt-item1">
+                <img src="img/owner showroom.png" alt="">
+            </div>
+            <div class="abt-item2">
+                <span>
+                    <p>Kunal Pandharkar</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="abt-item">
+            <div class="abt-item1">
+                <img src="img/address.png" alt="">
+            </div>
+            <div class="abt-item2">
+                <span>
+                    <p>Kunal Nivas, Adarsh Colony, Purna, Dist. Parbhani</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="abt-item">
+            <div class="abt-item1">
+                <img src="img/working time.png" alt="">
+            </div>
+            <div class="abt-item2">
+                <span>
+                    <p>10 am - 6 pm</p>
+                </span>
+            </div>
+        </div>
+
+
+
+        <div class="abt-item">
+            <div class="abt-item1">
+                <img src="img/suzuki.svg" alt="">
+            </div>
+            <div class="abt-item2">
+                <span>
+                    <p>suzuki</p>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        .social {
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            font-weight: 500;
+            background-image: linear-gradient(-90deg, #A60523, #db0e37);
+        }
+
+        .social-icons {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem;
+            border-radius: 2px;
+        }
+    </style>
+
+
+    <div class="social">
+        <p style="width: 100%;">Follow us on</p>
+        <div class="social-icons">
+            <i class="fa fa-instagram" aria-hidden="true" style="font-size: 2rem; color:rgb(226, 46, 166);"></i>
+            <i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 2rem; color: #3b5998"></i>
+            <i class="fa fa-twitter" aria-hidden="true" style="font-size: 2rem; color: #00acee"></i>
+            <img src="img/whatsapp.svg" alt="" style="height: 2rem; width: 2rem;">
+        </div>
+
+    </div>
+
+    <hr>
+    <div class="contact-showroom-cont">
+        <h2 class="scroll-heading">Contact Us</h2>
+        <div class="underline-heading"></div>
+        <hr>
+        <div class="contact-nos-garage">
+            <h4 class="services-list-bullets">
+                <button type="button" class="btn btn-outline-dark"> <i class="fa fa-phone-square" aria-hidden="true"
+                        style="margin-right: 1rem;"></i> 9191991990</button>
+
+            </h4>
+            <h4 class="services-list-bullets">
+                <button type="button" class="btn btn-outline-dark">
+
+                    <span style="font-size:1rem;"><i class="fa fa-phone-square" aria-hidden="true"
+                            style="margin-right: 1rem;"></i> 9191991990</span>
+                </button>
+            </h4>
+        </div>
+
+    </div>
+    <div style="display:flex; justify-content: center;">
+        <h4 class="services-list-bullets">
+            <button type="button" class="btn btn-outline-danger" style="margin-top:-4rem;">
+                <i class="fa fa-envelope" aria-hidden="true" style="margin:0.3rem"></i>
+                <span style="margin-left:12px; font-size:1rem;">xyz.ab@gmail.com</span>
+            </button>
+        </h4>
+    </div>
+
+    <footer class="footer" style="position: relative;">
+        <p class="footer-item">© 2020-2021 VeGO</p>
+        <a style="margin: auto;" href="#"><i class="large material-icons footer-item">arrow_upward</i></a>
+
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+        $('.carousel').carousel({
+            interval: 10000
+        })
+
+    </script>
+</body>
+
+</html>

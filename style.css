@@ -1,0 +1,885 @@
+
+*{
+
+    font-family: 'Roboto', sans-serif;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+/* header*/
+
+.rounded {
+    height: 3rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown-item:active {
+    background-color: black;
+    color: blanchedalmond;
+}
+
+.nav-link{
+    font-size: 1.3rem;
+    text-decoration: white underline;
+}
+
+@media (max-width:600px)  and (min-width:200px){
+
+    .rounded {
+        height: 3rem;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .dropdown-item:active {
+        background-color: black;
+        color: blanchedalmond;
+    }
+    
+    .nav-link{
+        font-size:0.9rem;
+        font-weight: 500;
+        text-decoration: white underline;
+        color: #06192D;
+    }
+}
+
+/*service cards*/
+
+.card-img {
+    height: 15rem;
+    width: 16rem;
+    margin:auto;
+}
+
+.cards-top {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}   
+
+.card {
+    height:18rem;
+    width:18rem;;
+    /* border: 1px  rgb(196, 193, 193); */
+    margin:10px;
+    /* box-shadow: 3px 3px 3px rgb(100, 100, 100); */
+    border:0.1px solid rgb(216, 215, 215);
+    box-shadow: 0.1px 1px 4px rgb(170, 168, 168);
+    border-radius: 20px;
+    
+}
+
+.card:hover{
+    border: 2px solid grey;
+
+}
+
+.card-text{
+    text-align: center;
+    font-size: 1.5rem;
+    color:black;
+    text-decoration: underline white;
+    font-family: 'Roboto', sans-serif;
+
+    
+}
+
+.card-text:hover{
+    text-decoration: underline white;
+    color:black;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width:600px)  and (min-width:200px){
+    .card-text{
+        text-align: center;
+        font-size: 0.9rem;
+        color:black;
+    text-decoration: underline white;
+    font-family: 'Roboto', sans-serif;
+        
+    }
+
+    .card-text:hover{
+        text-decoration: underline white;
+        color:black;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+@media (max-width:600px)  and (min-width:200px){
+
+    .card-img {
+    height: 6rem;
+    width: 6rem;
+    margin: auto;
+}
+
+
+.card{
+    height:10rem;
+    width:10rem;
+}
+}
+
+
+/*scrolling cards*/
+
+
+.scroll-heading{
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    
+}
+.underline-heading{
+    border-top: 3px solid #A60523;
+    width: 20%;
+    margin: auto;
+}
+
+.horizontal-scroll {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+    box-sizing: border-box;
+
+}
+
+.scroll-container {
+    display: block;
+    white-space: nowrap;
+
+}
+
+.item {
+    display: inline-block;
+    margin-right: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-left: 3px;
+    box-shadow: 2px 2px 12px rgb(218, 216, 216);
+    border-bottom: 1.5px solid rgb(235, 232, 232);  
+
+}
+.fa-star{
+    color: gold;
+}
+
+.item img {
+    width: 70rem;
+    
+    
+}
+
+.scroll{       
+    margin: auto;
+}
+
+.scroll-cap{
+
+    text-align: center;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+.scroll-cap{
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #06192D;
+    font-weight: 500;
+
+}
+.scroll-cap2{
+
+    text-align: center;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.5rem;
+    margin-bottom: 0.3rem;
+
+}
+.scroll-cap3{
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    
+}
+
+
+
+
+@media (min-width:900px){
+    .scroll-heading{
+
+        text-align: center;
+        
+        font-size: 3rem;
+
+    }
+    .underline-heading{
+        border-top: 3px solid #A60523;
+        width: 20%;
+        margin: auto;
+    }
+    
+    .horizontal-scroll {
+        display: flex;
+        width: 100%;
+        overflow-x: hidden;
+        flex-wrap: wrap;
+        
+    }
+
+    .scroll-container {
+       
+        width: 25%;
+    }
+
+    .item {
+        display: inline-block;
+        margin-right: 5px;
+        background-color: #ffffff;
+        color: #06192D;
+        border-radius: 5px;
+        margin-left: 10px;
+        box-shadow: 2px 2px 12px rgb(218, 216, 216);
+        border-bottom: 1.5px solid rgb(235, 232, 232);
+        width: 74%;
+    }
+
+    .item img {
+        width: 100%;
+        height: 10rem;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .scroll{
+        
+        margin: auto;
+    }
+
+    .scroll-cap{
+
+       
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+        font-weight: 550;
+
+    }
+    .scroll-cap2{
+
+        text-align: center;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    
+    }
+    .scroll-cap3{
+    
+        text-align: center;
+        white-space: pre-line;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+    
+    }
+    
+    
+}
+@media (max-width:600px) and (min-width:200px) {
+
+    .scroll-heading{
+
+        text-align: center;
+        
+        font-size: 1.5rem;
+
+    }
+    .underline-heading{
+        border-top: 3px solid #A60523;
+        width: 20%;
+        margin: auto;
+    }
+    
+    .horizontal-scroll {
+        display: block;
+        width: 100%;
+        overflow-x: scroll;
+        box-sizing: border-box;
+    }
+
+    .scroll-container {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .item {
+        display: inline-block;
+        margin-right: 5px;
+        background-color: #ffffff;
+        color: #06192D;
+        border-radius: 5px;
+        margin-left: 10px;
+        width: 40%;
+        height: 170px;
+        box-shadow: 2px 2px 12px rgb(218, 216, 216);
+        border-bottom: 1.5px solid rgb(235, 232, 232);
+        
+        
+    }
+
+    .item img {
+        width:100%;
+        height: 6rem;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    
+
+    .scroll-cap{
+
+        
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+        font-weight: 550;
+
+    }
+    .scroll-cap2{
+
+      
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.5rem;
+        margin-bottom: 0.7rem;
+    
+    }
+    .scroll-cap3 p{
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.7rem;
+        margin-bottom: 0.3rem;
+        white-space: pre-line;
+    
+    }  
+
+}
+
+
+
+
+
+/*footer*/
+
+.footer{
+    display:flex;
+    left:0;
+    bottom:0;
+    width: 100%;
+    position: fixed;
+    flex-direction: column;
+    background-color: #06192D;
+    color:white;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+}
+.footer2{
+    display:flex;
+    left:0;
+    bottom:0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #06192D;
+    color:white;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+.footer-item{
+margin:auto;
+}
+
+
+/* contact us */
+
+    *{
+        font-family: 'Roboto', sans-serif;
+    }
+    .row-team{
+        display: flex;
+        justify-content: center;
+             
+    }
+
+    .col-team{
+
+        border: 1px solid rgb(214, 213, 213);
+        border-radius: 20px;
+        margin: 1rem;
+        box-shadow: 1px 1px 4px grey;
+        padding: 10px;
+        width: 25%;
+        
+
+    }
+    .img-team{
+        margin-left: 25%;
+       
+    }
+    .img-team img{
+       
+        border-radius: 50%;
+        height: 10rem;
+        width: 10rem;
+        margin: auto;
+        
+    }
+    .name-team{
+        text-align: center;
+    }
+    .title-team{
+        color: grey;
+        text-align: center;
+    }
+    .email-team{
+        margin-top: 0.7rem;
+        text-align: center;
+    }
+    .team-btn{
+        margin-top: 0.7rem;
+    }
+
+    .contact-btn{
+        width: 100%;
+        border-radius: 10px;
+        background-color: #A60523;
+        border: 2px solid #A60523;
+        color: white;
+    }
+
+    @media (max-width:600px)  and (min-width:200px){
+        *{
+        font-family: 'Roboto', sans-serif;
+    }
+    .row-team{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+             
+    }
+
+    .col-team{
+
+        border: 1px solid rgb(214, 213, 213);
+        border-radius: 20px;
+        margin: auto;
+        margin-bottom: 1rem;
+        box-shadow: 1px 1px 4px grey;
+        padding: 10px;
+        width: 80%;
+      
+    }
+    .img-team{
+        margin-left: 25%;
+       
+    }
+    .img-team img{
+       
+        border-radius: 50%;
+        height: 10rem;
+        width: 10rem;
+        margin: auto;
+        box-shadow: 2px 2px 5px grey;
+    
+        
+    }
+    .title-team{
+        color: grey;
+        text-align: center;
+    }
+    .email-team{
+        margin-top: 0.7rem;
+        text-align: center;
+    }
+    .team-btn{
+        margin-top: 0.7rem;
+    }
+
+    .contact-btn{
+        width: 100%;
+        border-radius: 10px;
+        background-color: #A60523;
+        border: 2px solid #A60523;
+        color: white;
+    }
+    }
+
+    /* garage info */
+
+    .garage-services {
+       
+        width: 100%;
+        background-color: rgb(192, 238, 247);
+        background-image: linear-gradient(-90deg, rgb(192, 238, 247), rgb(177, 230, 243));
+        margin-bottom: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .services-list {
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    .services-list-bullets{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        list-style: none;
+    }
+    
+    .services-list-bullets img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .abt-list{
+        color: white;
+    }
+    @media (max-width:600px)  and (min-width:200px){
+        .garage-services {
+            
+            width: 100%;
+            margin: auto;
+            margin-bottom: 1rem;
+        }
+    
+        .services-list {
+            display: flex;
+            margin: 2px;
+        }
+
+        .services-list-bullets{
+            font-size: 1rem;
+            font-weight: 550;
+            
+           
+        }
+        .services-list-bullets img{
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+
+    }
+
+    .container-garage-abt{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1rem;
+        background-color: #A60523;
+        background-image: linear-gradient(-90deg, #A60523,#db0e37);
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .garage-abt{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        color: white;
+        
+    }
+    
+    @media (max-width:600px)  and (min-width:200px){
+        .garage-abt{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        
+       }
+    }
+    .contact-nos-garage{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+    }
+
+
+     @media (max-width:600px)  and (min-width:200px){
+       
+    
+    .contact-nos-showroom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+        
+    } }
+
+
+    
+/* vehicle info */
+
+    .vehicle-features {
+        
+        width: 100%;
+       
+        margin-bottom: 1rem;
+    }
+
+    .features-list {
+        display: flex;
+        justify-content: space-between;
+        background-color: #3a3939;
+        background-image: linear-gradient(90deg,rgb(46, 46, 46),rgb(68, 68, 68));
+        color: #ffffff;
+        padding: 1.5rem;
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
+       
+    }
+    .features-list-bullets{
+        font-size: 1.5rem;
+        list-style: none;
+    }
+    
+    @media (max-width:600px)  and (min-width:200px){
+        .vehicle-features {
+           
+            margin-bottom: 1rem;
+        }
+    
+        .features-list {
+            display: flex;
+            
+        }
+
+        .features-list-bullets{
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+
+    }
+    .video-cont {
+        display: flex;
+        padding: 1rem;
+        justify-content: center;
+
+    }
+
+    .video-cont video {
+
+        width: 100%;
+
+
+    }
+.more-videos{
+    font-size: 1.5rem;
+}
+
+    .vehicle-pics-cont{
+        display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .vehicle-pics{
+        border: 1px solid rgb(182, 181, 181);
+        width:25rem;
+        display: flex;
+        justify-content: center;
+        box-shadow: 1px 1px 3px rgb(187, 185, 185);
+    }
+    .vehicle-pics:hover{
+        background-color: rgb(225, 230, 230);
+    }
+    .vehicle-pics-more{
+        border: 1px solid rgb(206, 204, 204);
+        width:25rem;
+       
+        display: flex;
+        justify-content: center;
+        background-color: rgb(207, 205, 206);
+    }
+
+    .vehicle-pics img{
+        width:25rem;  
+    }
+    .more-vehicles{
+
+       font-size: 3rem;
+       margin: auto;
+    }
+
+    @media (max-width:600px)  and (min-width:200px){
+        .more-videos{
+            font-size: 1rem;
+        }
+        .vehicle-pics-cont{
+            display: flex;
+            width: 100%;
+            margin-bottom: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .vehicle-pics{
+            border: 1px solid rgb(223, 220, 220);
+            width:7rem;
+            box-shadow: 1px 1px 3px rgb(206, 204, 204);
+            display: flex;
+            justify-content: center;
+        }
+        .vehicle-pics-more{
+            border: 1px solid rgb(206, 204, 204);
+            width:7rem;
+           
+            display: flex;
+            justify-content: center;
+            background-color: rgb(207, 205, 206);
+        }
+    
+        .vehicle-pics img{
+            width:6rem;
+            height: 6rem;
+        }
+        
+        .more-vehicles{
+    
+           font-size: 1rem;
+           
+        }
+        }
+
+        .compare-btn-cont {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            width: 100%;
+
+        }
+
+       
+       /* sign in - sign up modal */
+
+
+    .btn-google {
+        color: white;
+        background-color: #A60523;
+        width: 100%;
+
+        margin-bottom: 10px;
+    }
+
+    .btn-facebook {
+        color: white;
+        background-color: #3b5998;
+        width: 100%;
+
+    }
+
+
+    .offer-item img {
+        height: 9rem;
+        width: 16rem;
+        margin-left: 3px;
+        margin-right: 3px;
+        border-radius: 5px;
+    }
+
+    @media (max-width:600px) and (min-width:200px) {
+        .offer-item img {
+            height: 9rem;
+            width: 16rem;
+            margin-left: 3px;
+            margin-right: 3px;
+
+        }
+
+        #offer1 {
+            margin-left: 18px;
+        }
+
+        #offer4 {
+            margin-right: 18px;
+        }
+    }
+
+
+    @media(min-width: 900px) {
+        .offer-item img {
+            height: 13rem;
+            width: 21rem;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        #offer1 {
+            margin-left: 5rem;
+        }
+
+
+    }
+
+
+    .showroom-item img {
+        height: 9rem;
+        width: 16rem;
+       margin-top: 1rem;
+        margin-right: 3px;
+        border-radius: 5px;
+    }
+
+    @media (max-width:600px) and (min-width:200px) {
+        .showroom-item img {
+            height: 4rem;
+            width: 4rem;          
+                    }
+
+        #showroom1 {
+           margin-left: 3px;
+        }
+
+        #showroom4 {
+            margin-right: 3px;
+        }
+    }
+
+
+    @media(min-width: 900px) {
+        .showroom-item img {
+            height: 13rem;
+            width: 21rem;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        #showroom1 {
+            margin-left: 5rem;
+        }
+
+
+    }
+
+
+  
