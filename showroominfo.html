@@ -22,10 +22,7 @@
         color: gold;
     }
 
-    .fa-whatsapp {
-        color: green;
-    }
-
+    
     .input-group {
         border: 2px solid white;
 
@@ -84,8 +81,8 @@
     .vehicle-cont {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 0.5rem;
+
+
     }
 
     .vehicle-item {
@@ -160,7 +157,8 @@
         height: 2rem;
         width: 2rem;
         background-color: rgb(236, 235, 235);
-        border: 2px solid rgb(150, 150, 150);
+        border: 2px solid rgb(233, 232, 232);
+        box-shadow: 1px 1px 3px rgb(190, 190, 190);
         border-radius: 50%;
     }
 
@@ -190,7 +188,7 @@
         margin-right: 1.5rem;
         margin-left: -10rem;
         margin-top: 1rem;
-        background-color: rgb(38, 168, 12);
+        background-color: rgb(88, 172, 0);
         opacity: 0.9;
         font-size: 0.8rem;
         padding: 0.5rem;
@@ -208,25 +206,31 @@
     }
 
     .showroom-top-info {
-            margin: 1rem;
-        }
 
-        #showroom-name {
-            font-size: 1rem;
-        }
+        box-shadow: 1px 1px 8px lightgrey;
+        padding: 0.5rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
 
-        .ratings1 p {
-            float: right;
-            margin-right: 1.5rem;
-            margin-left: -10rem;
-            background-color: rgb(38, 168, 12);
-            opacity: 0.9;
-            font-size: 0.7rem;
-            padding: 0.3rem;
-            border: 1px solid white;
-            border-radius: 10%;
-            color: white;
-        }
+    #showroom-name {
+        font-size: 1rem;
+    }
+
+    .ratings1 p {
+        float: right;
+        margin-right: 1.5rem;
+        margin-left: -10rem;
+        background-color: rgb(88, 172, 0);
+        opacity: 0.9;
+        font-size: 0.7rem;
+        padding: 0.3rem;
+        border: 1px solid white;
+        border-radius: 10%;
+        color: white;
+    }
 </style>
 <!-- Sidebar -->
 <header>
@@ -492,459 +496,200 @@
         <div class="ratings1">
             <p>4.5 <i class="fa fa-star" aria-hidden="true" style="color: white; margin-top: 0.1rem;"></i></p>
         </div>
+
+        <span>
+            <p style="color: rgb(226, 151, 12);"><i class="fa fa-thumbs-up" aria-hidden="true"></i> We Assure the Best
+                Service to You !</p>
+        </span>
         <strong>
             <span>
                 <p id="showroom-name">Arihant Hero-Honda Showroom</p>
             </span>
         </strong>
         <span>
-            <p>Near street 8, Aurangabad</p>
+            <p style="color: grey;">Kunal Nivas, Adarsh Colony, Purna, Dist. Parbhani</p>
+        </span>
+
+        <span>
+            <p style="color: rgb(92, 92, 92);">10am - 6pm</p>
         </span>
     </div>
 
 
-    <hr>
     <h2 class="scroll-heading" style="font-size: 1.2rem;">Popular Vehicles in our Showroom</h2>
     <div class="underline-heading"></div>
-       
-    <div class="vehicle-cont">
 
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
+    <div class="container pt-4 pb-4">
+        <div class="row">
+            <div class="col bg-light" id="showroomvehiclecard" style="margin-left:10px;margin-right:10px;">
+                <div class="carimageshowroom">
+                    <img src="img/car1.png" alt="">
+                </div>
+                <div class="carnameshowroom">
+                    <h5>Honda City 200</h5>
+                </div>
+                <div class="caryear">
+                    <p>2001</p>
+                </div>
+                <div class="variant">
+                    <p>Top Modal</p>
+                </div>
+                <div class="fueltype">
+                    <p>Petrol</p>
+                </div>
+                <div class="cc">
+                    <p>1500cc</p>
+                </div>
+                <div class="price">
+                    <h5> ₹ 80-90 Lakh</h5>
+                </div>
             </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
+            <div class="col  bg-light" id="showroomvehiclecard" style="margin-right:10px;">
+                <div class="carimageshowroom">
+                    <img src="img/car3.png" alt="">
+                </div>
+                <div class="carnameshowroom">
+                    <h5>Honda City 200</h5>
+                </div>
+                <div class="caryear">
+                    <p>2001</p>
+                </div>
+                <div class="variant">
+                    <p>Top Modal</p>
+                </div>
+                <div class="fueltype">
+                    <p>Petrol</p>
+                </div>
+                <div class="cc">
+                    <p>1500cc</p>
+                </div>
+                <div class="price">
+                    <h5> ₹ 80-90 Lakh</h5>
+                </div>
             </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                </span>
+
+
+        </div>
+        <div class="row pt-3">
+            <div class="col  bg-light" id="showroomvehiclecard" style="margin-left:10px;margin-right:10px;">
+                <div class="carimageshowroom">
+                    <img src="img/car4.png" alt="">
+                </div>
+                <div class="carnameshowroom">
+                    <h5>Honda City 200</h5>
+                </div>
+                <div class="caryear">
+                    <p>2001</p>
+                </div>
+                <div class="variant">
+                    <p>Top Modal</p>
+                </div>
+                <div class="fueltype">
+                    <p>Petrol</p>
+                </div>
+                <div class="cc">
+                    <p>1500cc</p>
+                </div>
+                <div class="price">
+                    <h5> ₹ 80-90 Lakh</h5>
+                </div>
             </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                        </strong>
-                    </p>
-                </span>
+            <div class="col  bg-light" id="showroomvehiclecard" style="margin-right:10px;">
+                <div class="carimageshowroom">
+                    <img src="img/car5.jpg" alt="">
+                </div>
+                <div class="carnameshowroom">
+                    <h5>Honda City 200</h5>
+                </div>
+                <div class="caryear">
+                    <p>2001</p>
+                </div>
+                <div class="variant">
+                    <p>Top Modal</p>
+                </div>
+                <div class="fueltype">
+                    <p>Petrol</p>
+                </div>
+                <div class="cc">
+                    <p>1500cc</p>
+                </div>
+                <div class="price">
+                    <h5> ₹ 80-90 Lakh</h5>
+                </div>
             </div>
+
+
+
         </div>
 
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
+        <a style="text-decoration: none; color:black;" href="morevehicles.html" data-name="Garage 1">
+            <div class="row bg-white pt-3" id="showroomscardsrow"
+                style="border-top:none;border-left:none;border-right:none;">
 
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                </span>
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
+                <div class="col circle1 text-center">
+                    <div class="row" style="margin-top:4%;margin-left:10%;margin-right:10%;margin-bottom:5%"
+                        onclick="location.href='registergarage.html';">
 
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                </span>
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
+                        <button class="btn btn-dark btn-block btn-lg"> See All Vehicles </button>
 
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
+                    </div>
+                    <!-- .top-info -->
+                </div>
             </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                </span>
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                </span>
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
-
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                </span>
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
-
-
-
+        </a>
     </div>
 
 
-    <a href="morevehicles.html" style=" float: right; margin-right: 1.5rem;"><span>263 More >></span></a>
-    <hr>
-
-    <h2 class="scroll-heading" style="font-size: 1.2rem;">Upcoming Vehicles in our Showroom</h2>
-    <div class="underline-heading"></div>
-   
-    <div class="vehicle-cont">
-
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle1.png" alt="">
-            </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Coming On
-                        <br>August 2021
-                    </p>
-                </span>
-
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
-
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle1.png" alt="">
-            </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Coming On
-                        <br>August 2021
-                    </p>
-                </span>
-
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
-
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle1.png" alt="">
-            </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Coming On
-                        <br>August 2021
-                    </p>
-                </span>
-
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
-
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle1.png" alt="">
-            </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Coming On
-                        <br>August 2021
-                    </p>
-                </span>
-
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
-
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle1.png" alt="">
-            </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Coming On
-                        <br>August 2021
-                    </p>
-                </span>
-
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
-
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle1.png" alt="">
-            </div>
-            <div class="vehicle-item-txt1">
-                <span>
-                    <strong>
-                        <p>Hero Passion Pro</p>
-                    </strong>
-                </span>
-            </div>
-            <div class="vehicle-item-txt2">
-                <span>
-                    <p>Coming On
-                        <br>August 2021
-                    </p>
-                </span>
-
-            </div>
-            <div class="vehicle-item-txt3">
-                <span>
-                    <p>
-                        <strong>
-                            <i class="fa fa-inr" aria-hidden="true"></i> 65,800 onwards
-                        </strong>
-                    </p>
-                </span>
-            </div>
-        </div>
 
 
 
-
-
-    </div>
-    <a href="morevehicles2.html" style=" float: right; margin-right: 1.5rem;"><span>20 More >></span></a>
-    <hr>
     <div class="garage-about-title">
         <h2 class="scroll-heading">About Showroom</h2>
         <div class="underline-heading"></div>
         <hr>
     </div>
 
-    <div class="ratings">
-
-        <p>4.5 <i class="fa fa-star" aria-hidden="true" style="color: white;"></i></p>
-
-    </div>
-
-
-    <div class="container-showroom-abt">
-
-        <div class="abt-item">
-            <div class="abt-item1">
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col aboutsh" id="colsh1">
                 <img src="img/owner showroom.png" alt="">
+                <p>Samruddhi Vaidya</p>
             </div>
-            <div class="abt-item2">
-                <span>
-                    <p>Kunal Pandharkar</p>
-                </span>
-            </div>
-        </div>
-
-        <div class="abt-item">
-            <div class="abt-item1">
+            <div class="col aboutsh" id="colsh2">
                 <img src="img/address.png" alt="">
-            </div>
-            <div class="abt-item2">
-                <span>
-                    <p>Kunal Nivas, Adarsh Colony, Purna, Dist. Parbhani</p>
-                </span>
+                <p>Kunal Niwas , adarsh Colony , Purna , Dist. Parbhani</p>
             </div>
         </div>
-
-        <div class="abt-item">
-            <div class="abt-item1">
-                <img src="img/working time.png" alt="">
+        <div class="row pt-4">
+            <div class="col aboutsh" id="colsh1">
+                <img src="img/rating star.png" alt="">
+                <p>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="color:black"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="color:black"></i>
+                </p>
             </div>
-            <div class="abt-item2">
-                <span>
-                    <p>10 am - 6 pm</p>
-                </span>
-            </div>
-        </div>
-
-
-
-        <div class="abt-item">
-            <div class="abt-item1">
-                <img src="img/suzuki.svg" alt="">
-            </div>
-            <div class="abt-item2">
-                <span>
-                    <p>suzuki</p>
-                </span>
+            <div class="col aboutsh" id="colsh2">
+                <img src="img/volkswagen.svg" alt="">
+                <h5>volkswagen</h5>
             </div>
         </div>
-
     </div>
 
     <style>
         .social {
-            padding: 1rem;
+
             text-align: center;
-            color: white;
+            font-size: 1.3rem;
             font-weight: 500;
-            background-image: linear-gradient(-90deg, #A60523, #db0e37);
+            /* background-image: linear-gradient(-90deg, #1f1e1e, #3d3d3d); */
         }
 
         .social-icons {
-            background-color: white;
+            background-image: linear-gradient(-90deg, #f7f7f7, #ebebeb, #f7f7f7);
+            box-shadow: 1px 1px 5px #e6e6e6;
             display: flex;
             justify-content: space-between;
             padding: 1.5rem;
@@ -954,13 +699,9 @@
 
 
     <div class="social">
-        <p style="width: 100%;">Follow us on</p>
-        <div class="social-icons">
-            <i class="fa fa-instagram" aria-hidden="true" style="font-size: 2rem; color:rgb(226, 46, 166);"></i>
-            <i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 2rem; color: #3b5998"></i>
-            <i class="fa fa-twitter" aria-hidden="true" style="font-size: 2rem; color: #00acee"></i>
-            <img src="img/whatsapp.svg" alt="" style="height: 2rem; width: 2rem;">
-        </div>
+        <!-- <p style="width: 100%;">Follow us on</p> -->
+
+
 
     </div>
 
@@ -969,30 +710,105 @@
         <h2 class="scroll-heading">Contact Us</h2>
         <div class="underline-heading"></div>
         <hr>
-        <div class="contact-nos-garage">
-            <h4 class="services-list-bullets">
-                <button type="button" class="btn btn-outline-dark"> <i class="fa fa-phone-square" aria-hidden="true"
-                        style="margin-right: 1rem;"></i> 9191991990</button>
 
-            </h4>
-            <h4 class="services-list-bullets">
-                <button type="button" class="btn btn-outline-dark">
 
-                    <span style="font-size:1rem;"><i class="fa fa-phone-square" aria-hidden="true"
-                            style="margin-right: 1rem;"></i> 9191991990</span>
-                </button>
-            </h4>
+    </div>
+    <div class="container contact ">
+        <div class="row">
+            <div class="col aboutsh text-center" id="colcont1">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <h3>Mobile No 1</h3>
+                <p id="contactdata" class="lead mb-0">7774843561</p>
+            </div>
+            <div class="col aboutsh text-center" id="colcont2">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <h3>Mobile No 1</h3>
+                <p id="contactdata" class="lead mb-0">7774843561</p>
+            </div>
+        </div>
+        <div class="row pt-4">
+            <div class="col aboutsh text-center" id="colcont1">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <h3>Whatsapp</h3>
+                <p id="contactdata" class="lead mb-0">7774843561</p>
+            </div>
+            <div class="col aboutsh text-center" id="colcont2">
+                <i class="fa fa-facebook-official" aria-hidden="true"></></i>
+                <h3>Facebook</h3>
+                <p id="contactdata" class="lead mb-0">KunalPandharkar</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="customersreview">
+
+        <div class="container" id="review" onclick="location.href='reviews.html';" >
+            <div class="row" id="customerrev">
+                <div class="">
+                    <h3>Customer Reviews</h3>
+                </div>
+            </div>
+            <div class="" id="customerrev4">
+                <p><i class="fa fa-angle-right" aria-hidden="true"></i></p>
+            </div>
+            <div class="row" id="customerrev2">
+                <p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    &nbsp; 4.2/5
+                </p>
+            </div>
+            <div class="row" id="customerrev3">
+                <p>3,700 Customer Reviews</p>
+            </div>
         </div>
 
-    </div>
-    <div style="display:flex; justify-content: center;">
-        <h4 class="services-list-bullets">
-            <button type="button" class="btn btn-outline-danger" style="margin-top:-4rem;">
-                <i class="fa fa-envelope" aria-hidden="true" style="margin:0.3rem"></i>
-                <span style="margin-left:12px; font-size:1rem;">xyz.ab@gmail.com</span>
-            </button>
-        </h4>
-    </div>
+        <div style="margin:0px 10px 0px 15px;">
+            <h5>Top Reviews</h5>
+        </div>
+        <div class="container topreviews">
+   
+                <h5>Kunal Pandharkar</h5>
+                <p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </p>
+                <p id="ctime">9:30am , Thursday 11-2012</p>
+                <p id="comment">saregama (on behalf of Saregama India Limited); ASCAP, UNIAO BRASILEIRA DE EDITORAS DE MUSICA - UBEM,
+                    BMI - Broadcast Music Inc., LatinAutor, Saregama Publishing, LatinAutor - SonyATV, and 13 music
+                    rights societies</p>
+            
+        
+        </div>
+        <div class="container topreviews">
+            <h5>Kunal Pandharkar</h5>
+            <p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </p>
+            <p id="ctime">9:30am , Thursday 11-2012</p>
+            <p id="comment">saregama (on behalf of Saregama India Limited); ASCAP, UNIAO BRASILEIRA DE EDITORAS DE MUSICA - UBEM,
+                BMI - Broadcast Music Inc., LatinAutor, Saregama Publishing, LatinAutor - SonyATV, and 13 music
+                rights societies</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
 
     <footer class="footer" style="position: relative;">
         <p class="footer-item">© 2020-2021 VeGO</p>

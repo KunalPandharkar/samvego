@@ -882,4 +882,247 @@ margin:auto;
     }
 
 
+
+    
+#showroomvehiclecard{
+
+    border: 0.5px solid rgb(240, 239, 239);
+    box-shadow: 0.5px 0.5px 3px rgb(240, 239, 239);
+  }
+  #showroomvehiclecard:hover {
+    border:1px solid rgb(151, 132, 132);
+  }
+  .carimageshowroom img{
+   width:100%;
+   height:5rem;
+   margin-top:10px;
+  }
+  .carnameshowroom{
+    margin-top:5px;
+    width:100%;
+  }
+  .carnameshowroom h5{
+    font-size:0.8rem;
+    font-weight:700;
+    text-align: center;
+    
+  }
+  .caryear{
   
+    width:100%;
+  }
+  .caryear p{
+    margin:0;
+  
+    font-size:0.8rem;
+    text-align:center;
+  }
+  .variant{
+    
+    width:100%;
+  }
+  .variant p{
+    margin:3px 0px 0px 0px;
+    text-align:center;
+    font-size:0.8rem;
+  }
+  .fueltype p{
+    margin:3px 0px 0px 0px;
+    text-align:center;
+    font-size:0.8rem;
+  }
+  .cc p{
+    margin:3px 0px 0px 0px;
+    text-align:center;
+    font-size:0.8rem;
+  }
+  .price h5{
+    margin:3px 0px 0px 0px;
+    text-align:center;
+    font-size:1rem;
+    font-weight:600;
+  }
+  .aboutsh img{
+    width:50%;
+    height:5rem;
+    margin-top:10px;
+    margin-left:40px;
+   }
+   .aboutsh p{
+       text-align:center;  
+   }
+   #colsh1{
+      margin:0;
+   }
+   #colsh2 p{
+      font-size:0.7rem;
+   }
+   #colsh2 h5{
+    font-size:1rem;
+    font-weight:700;
+    text-align:center;  
+   }  
+   #colcont1{
+       font-size:4rem;
+   }
+   #colcont2{
+    font-size:4rem;
+   }
+
+
+
+   .contact {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  
+    background-image: linear-gradient(90deg,rgb(46, 46, 46),rgb(68, 68, 68));
+    color: white;
+  }
+    .contact h3 {
+        font-weight: 600;
+        font-size:1rem;
+        text-shadow: 0 0 3px rgba(0,0,0,0.2);
+    }
+    .contact p {
+        font-weight: 300;
+        font-size: 0.9rem;
+        
+    }
+
+    
+.searchbox2 {
+    height: 60px;
+    width: 450px;
+    max-width: 100%;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    
+    display: flex;
+  }
+  .s{
+    width: 750px;
+  }
+  .searchbox2 > .btn-menu {
+    padding: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .searchbox2 > .search {
+    border: none;
+    width: 100%;
+  }
+  .searchbox2 > .btn-search {
+    padding: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .sv{
+    width: 90%;
+    margin-bottom:30px;
+    margin-top:30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+
+    
+
+#vehimagecol img{
+    width:100%;
+    margin-top:30px;
+  }
+  
+  
+  .vehname h5{
+    margin:8px 0px 0px 0px;
+    font-size:1rem;
+    font-weight:700;
+  }
+  .modalveh p{
+    margin:2px 0px 0px 0px;
+    font-size:0.9rem;
+  }
+  .vehyr p{
+    margin:2px 0px 0px 0px;
+    font-size:0.9rem;
+  }
+  .petrolordiesel p{
+    margin:2px 0px 0px 0px;
+    font-size:0.9rem;
+  }
+  .enginecc p{
+    margin:2px 0px 0px 0px;
+    font-size:0.9rem;
+  }
+  
+  .ratingsveh p{
+    margin:2px 0px 0px 0px;
+    font-size:0.9rem;
+  }
+  .vehprice h5{
+    margin:5px 0px 8px 0px;
+    font-size:1rem;
+    font-weight: 700;
+    margin-bottom:10px;
+  }
+  #vehcards{
+    border-top: 1.5px solid rgb(240, 239, 239);
+    border-bottom:1.5px solid rgb(240, 239, 239);
+    box-shadow: 0.5px 0.5px 3px rgb(240, 239, 239);
+  }
+  #review{
+  
+    margin-bottom: 10px;
+    border-top: 2px solid rgb(235, 232, 232);
+    margin-top:6px;
+    border-bottom: 2px solid rgb(235, 232, 232);
+    box-shadow: 2px 2px 2px rgb(232, 240, 241);
+  }
+  #customerrev h3{
+     font-weight:600;
+     font-size:1.4rem;
+     margin:10px 0px 0px 10px;
+  }
+  #customerrev2 p{
+    font-weight:700;
+    margin:10px 0px 0px 0px;
+  }
+  #customerrev3 p{
+    font-size:1rem;
+    margin:10px 0px 10px 0px;
+  }
+  #customerrev4 p{
+   float:Right;
+   font-size:25px;
+  }
+  .topreviews{
+    margin-bottom: 10px;
+  
+  
+    border-bottom: 2px solid rgb(235, 232, 232);
+  }
+  .topreviews h5{
+    font-weight:650;
+    font-size:1rem;
+    margin:10px 0px 0px 0px;
+  }
+  .topreviews span{
+     font-size: 0.7rem;
+     margin:0px 0px 0px 0px;
+  }
+  #ctime{
+    font-size:0.6rem;
+    margin:-12px 0px 0px 0px;
+  }
+  #comment{
+    font-size:0.8rem;
+    margin:5px 0px 10px 0px;
+  }
+  #ndc{
+    border-top: 2px solid rgb(235, 232, 232);
+  }

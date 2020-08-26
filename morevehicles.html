@@ -23,33 +23,16 @@
     }
 
 
-    .input-group {
-        border: 2px solid white;
-
-    }
+  
 
 
     @media(min-width:900px) {
-        .input-group {
-            border: 2px solid white;
-            width: 55%;
-            margin-left: 25%;
-        }
+ 
 
     }
 
 
-    input[type=text] {
-        box-sizing: border-box;
-        border: 2px solid rgb(173, 172, 172);
-        border-left: none;
-        padding-left: 1rem;
-        height: 3rem;
-        background-color: white;
-        background-image: linear-gradient(-90deg, #A60523, #db0e37);
-        width: 80%;
-
-    }
+ 
 
     #button-addon2 img {
         height: 1.3rem;
@@ -63,9 +46,6 @@
         border: 2px solid rgb(212, 212, 212);
     }
 
-    ::placeholder {
-        color: white;
-    }
 
     /* vehicles in showroom */
     .vehicle-cont {
@@ -114,6 +94,15 @@
     .vehicle-item-txt2 span {
         font-size: 0.7rem;
         color: grey;
+    }
+
+    .vehicle-item-txt4 span {
+        color: rgb(88, 172, 0);
+        font-size: 0.8rem;
+        font-weight: 550;
+    }
+    .unavailable span{
+        color: #A60523;
     }
 </style>
 <!-- Sidebar -->
@@ -317,278 +306,167 @@
 
     <div class="search-bar">
 
-        <div class="input-group mb-3">
-            <div class="input-group-append">
-                <button class="btn btn-outline" type="button" id="button-addon2">
-                    <img src="img/search bar.png" alt="">
+      
+            <div class="searchbox2 sv">
+                <button class="btn-menu nearby2">
+                    <img src="img/2wh.png" class="img-fluid caricon" style="width:5.2rem;margin-top:-10px">
                 </button>
-            </div>
-            <input type="text" placeholder="Search Vehicle in the Showroom">
-        </div>
+                <input id="search" type="text" placeholder="Search Vehicle in Showroom" name="search"
+                    class="search">
+                <button class="btn-search nearby2">
+                    <img src="img/search bar.png" style="width:2rem;margin-top:-5px">
+                </button>
+            
     </div>
 
-    <div class="vehicle-cont">
-
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-
-            <div class="vehicle-item-txt">
-                <div class="vehicle-item-txt1">
-                    <span>
-                        <strong>
-                            <p>Hero Passion Pro</p>
-                        </strong>
-                    </span>
+    <section>
+        <div class="container">
+            <div class="row" id="vehcards">
+                <div class="col" id="vehimagecol"  onclick="location.href='vehicleinfo.html';">
+                    <div class="vehicleimg">
+                        <img src="img/car1.png" alt="">
+                    </div>
+                    <span class="badge badge-warning">3 Offers</span>
                 </div>
-                <div class="vehicle-item-txt2">
-                    <span>
-                        <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt3">
-                    <span>
+                <div class="col" id="vehinfocol">
+                    <div class="vehname">
+                        <h5>Honda City 200</h5>
+                    </div>
+                    <div class="vehyr">
+                        <p>2001</p>
+                    </div>
+                    <div class="modalveh">
+                        <p>Top Modal</p>
+                    </div>
+                    <div class="petrolordiesel">
+                        <p>Diesel</p>
+                    </div>
+                    <div class="enginecc">
+                        <p>20000cc</p>
+                    </div>
+                    <div class="ratingsveh">
                         <p>
-                            <strong>
-                                <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                            </strong>
+                            <span class="badge badge-success">
+                                4.5 <span class="fa fa-star"></span>
+                            </span>
                         </p>
-                    </span>
+                    </div>
+                    <div class="vehprice">
+                        <h5>₹90.25 Lakh </h5>
+
+                    </div>
                 </div>
             </div>
-
-        </div>
-
-        
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-
-            <div class="vehicle-item-txt">
-                <div class="vehicle-item-txt1">
-                    <span>
-                        <strong>
-                            <p>Hero Passion Pro</p>
-                        </strong>
-                    </span>
+            <div class="row pt-2" id="vehcards">
+                <div class="col" id="vehimagecol">
+                    <div class="vehicleimg">
+                        <img src="img/car3.png" alt="">
+                    </div>
+                  
                 </div>
-                <div class="vehicle-item-txt2">
-                    <span>
-                        <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt3">
-                    <span>
+                <div class="col" id="vehinfocol">
+                    <div class="vehname">
+                        <h5>Honda City 200</h5>
+                    </div>
+                    <div class="vehyr">
+                        <p>2001</p>
+                    </div>
+                    <div class="modalveh">
+                        <p>Top Modal</p>
+                    </div>
+                    <div class="petrolordiesel">
+                        <p>Diesel</p>
+                    </div>
+                    <div class="enginecc">
+                        <p>20000cc</p>
+                    </div>
+                    <div class="ratingsveh">
                         <p>
-                            <strong>
-                                <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                            </strong>
+                            <span class="badge badge-success">
+                                4.5 <span class="fa fa-star"></span>
+                            </span>
                         </p>
-                    </span>
+                    </div>
+                    <div class="vehprice">
+                        <h5>₹90.25 Lakh </h5>
+
+                    </div>
                 </div>
             </div>
-
-        </div>
-
-        
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-
-            <div class="vehicle-item-txt">
-                <div class="vehicle-item-txt1">
-                    <span>
-                        <strong>
-                            <p>Hero Passion Pro</p>
-                        </strong>
-                    </span>
+            <div class="row pt-2" id="vehcards">
+                <div class="col" id="vehimagecol">
+                    <div class="vehicleimg">
+                      <img src="img/car4.png" alt="">
+                    </div>
+                    <span class="badge badge-warning">3 Offers</span>
                 </div>
-                <div class="vehicle-item-txt2">
-                    <span>
-                        <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt3">
-                    <span>
-                        <p>
-                            <strong>
-                                <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                            </strong>
+                <div class="col" id="vehinfocol">
+                    <div class="vehname">
+                        <h5>Honda City 200</h5>
+                    </div>
+                    <div class="vehyr">
+                        <p>2001</p>
+                    </div>
+                    <div class="modalveh">
+                        <p>Top Modal</p>
+                    </div>
+                    <div class="petrolordiesel">
+                        <p>Diesel</p>
+                    </div>
+                    <div class="enginecc">
+                        <p>20000cc</p>
+                    </div>
+                    <div class="ratingsveh">
+                        <p> 
+                            <span class="badge badge-success">
+                               4.5 <span class="fa fa-star"></span>
+                            </span>
                         </p>
-                    </span>
+                    </div>
+                    <div class="vehprice">
+                        <h5>₹90.25 Lakh </h5>
+                      
+                    </div>
                 </div>
             </div>
-
-        </div>
-
-        
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-
-            <div class="vehicle-item-txt">
-                <div class="vehicle-item-txt1">
-                    <span>
-                        <strong>
-                            <p>Hero Passion Pro</p>
-                        </strong>
-                    </span>
+            <div class="row pt-2" id="vehcards">
+                <div class="col" id="vehimagecol">
+                    <div class="vehicleimg">
+                      <img src="img/car5.jpg" alt="">
+                    </div>
+      
                 </div>
-                <div class="vehicle-item-txt2">
-                    <span>
-                        <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt3">
-                    <span>
-                        <p>
-                            <strong>
-                                <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                            </strong>
+                <div class="col" id="vehinfocol">
+                    <div class="vehname">
+                        <h5>Honda City 200</h5>
+                    </div>
+                    <div class="vehyr">
+                        <p>2001</p>
+                    </div>
+                    <div class="modalveh">
+                        <p>Top Modal</p>
+                    </div>
+                    <div class="petrolordiesel">
+                        <p>Diesel</p>
+                    </div>
+                    <div class="enginecc">
+                        <p>20000cc</p>
+                    </div>
+                    <div class="ratingsveh">
+                        <p> 
+                            <span class="badge badge-success">
+                               4.5 <span class="fa fa-star"></span>
+                            </span>
                         </p>
-                    </span>
+                    </div>
+                    <div class="vehprice">
+                        <h5>₹90.25 Lakh </h5>
+                      
+                    </div>
                 </div>
             </div>
-
         </div>
-
-        
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-
-            <div class="vehicle-item-txt">
-                <div class="vehicle-item-txt1">
-                    <span>
-                        <strong>
-                            <p>Hero Passion Pro</p>
-                        </strong>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt2">
-                    <span>
-                        <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt3">
-                    <span>
-                        <p>
-                            <strong>
-                                <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                            </strong>
-                        </p>
-                    </span>
-                </div>
-            </div>
-
-        </div>
-
-        
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-
-            <div class="vehicle-item-txt">
-                <div class="vehicle-item-txt1">
-                    <span>
-                        <strong>
-                            <p>Hero Passion Pro</p>
-                        </strong>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt2">
-                    <span>
-                        <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt3">
-                    <span>
-                        <p>
-                            <strong>
-                                <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                            </strong>
-                        </p>
-                    </span>
-                </div>
-            </div>
-
-        </div>
-
-        
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-
-            <div class="vehicle-item-txt">
-                <div class="vehicle-item-txt1">
-                    <span>
-                        <strong>
-                            <p>Hero Passion Pro</p>
-                        </strong>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt2">
-                    <span>
-                        <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt3">
-                    <span>
-                        <p>
-                            <strong>
-                                <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                            </strong>
-                        </p>
-                    </span>
-                </div>
-            </div>
-
-        </div>
-
-        
-        <div class="vehicle-item" onclick="location.href='vehicleinfo.html';">
-            <div class="vehicle-item-img">
-                <img src="img/vehicle.png" alt="">
-            </div>
-
-            <div class="vehicle-item-txt">
-                <div class="vehicle-item-txt1">
-                    <span>
-                        <strong>
-                            <p>Hero Passion Pro</p>
-                        </strong>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt2">
-                    <span>
-                        <p>Arihant Hero-Honda Showroom, Aurangabad</p>
-                    </span>
-                </div>
-                <div class="vehicle-item-txt3">
-                    <span>
-                        <p>
-                            <strong>
-                                <i class="fa fa-inr" aria-hidden="true"></i> 65,800
-                            </strong>
-                        </p>
-                    </span>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-
-    </div>
+    </section>
 
 
     <footer class="footer" style="position: relative;">
